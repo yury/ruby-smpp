@@ -4,6 +4,7 @@
 ## TEXTMATE
 *.tmproj
 tmtags
+*.gem
 
 ## EMACS
 *~

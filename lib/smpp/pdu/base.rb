@@ -88,7 +88,7 @@ module Smpp::Pdu
       @command_status = command_status
       @body = body
       @sequence_number = seq
-      @data = fixed_int(length) + fixed_int(command_id) + fixed_int(command_status) + fixed_int(seq) + body   
+      @data = fixed_int(length) + fixed_int(command_id) + fixed_int(command_status) + fixed_int(seq) + body.force_encoding('binary')
     end      
 
     def logger
@@ -119,7 +119,7 @@ module Smpp::Pdu
         buffer = []
         buffer += [tag >> 8, tag & 0xff]
         buffer += [length >> 8, length & 0xff]
-        output << buffer.pack('cccc') << optional_param.value
+        output << buffer.pack('cccc') << optional_param.value.force_encoding('binary')
       end
       output
     end
