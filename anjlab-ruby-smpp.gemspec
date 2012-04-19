@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "anjlab-ruby-smpp"
-  s.version = "0.6.1"
+  s.version = "0.6.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ray Krueger", "August Z. Flatby"]
-  s.date = "2012-04-18"
+  s.date = "2012-04-19"
   s.description = "Ruby implementation of the SMPP protocol, based on EventMachine. SMPP is a protocol that allows ordinary people outside the mobile network to exchange SMS messages directly with mobile operators."
   s.email = "raykrueger@gmail.com"
   s.extra_rdoc_files = [
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "anjlab-ruby-smpp.gemspec",
     "config/environment.rb",
     "examples/PDU1.example",
     "examples/PDU2.example",
@@ -57,7 +58,6 @@ Gem::Specification.new do |s|
     "lib/smpp/server.rb",
     "lib/smpp/transceiver.rb",
     "lib/sms.rb",
-    "ruby-smpp.gemspec",
     "test/delegate.rb",
     "test/encoding_test.rb",
     "test/optional_parameter_test.rb",
