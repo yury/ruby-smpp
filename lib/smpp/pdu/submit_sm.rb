@@ -4,13 +4,14 @@ class Smpp::Pdu::SubmitSm < Smpp::Pdu::Base
   attr_reader :service_type, :source_addr_ton, :source_addr_npi, :source_addr, :dest_addr_ton, :dest_addr_npi, 
               :destination_addr, :esm_class, :protocol_id, :priority_flag, :schedule_delivery_time, 
               :validity_period, :registered_delivery, :replace_if_present_flag, :data_coding, 
-              :sm_default_msg_id, :sm_length, :udh, :short_message, :optional_parameters
+              :sm_default_msg_id, :sm_length, :udh, :short_message, :optional_parameters, :source_options
 
   
   # Note: short_message (the SMS body) must be in iso-8859-1 format
   def initialize(source_addr, destination_addr, short_message, options={}, seq = nil)
      
     @msg_body = short_message
+    @source_options = options
     
     @udh = options[:udh]      
     @service_type            = options[:service_type]? options[:service_type] :''
