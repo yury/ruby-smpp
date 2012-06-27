@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ray Krueger", "August Z. Flatby"]
-  s.date = "2012-04-19"
+  s.date = "2012-06-27"
   s.description = "Ruby implementation of the SMPP protocol, based on EventMachine. SMPP is a protocol that allows ordinary people outside the mobile network to exchange SMS messages directly with mobile operators."
   s.email = "raykrueger@gmail.com"
   s.extra_rdoc_files = [
@@ -43,6 +43,8 @@ Gem::Specification.new do |s|
     "lib/smpp/pdu/bind_resp_base.rb",
     "lib/smpp/pdu/bind_transceiver.rb",
     "lib/smpp/pdu/bind_transceiver_response.rb",
+    "lib/smpp/pdu/bind_transmitter.rb",
+    "lib/smpp/pdu/bind_transmitter_response.rb",
     "lib/smpp/pdu/deliver_sm.rb",
     "lib/smpp/pdu/deliver_sm_response.rb",
     "lib/smpp/pdu/enquire_link.rb",
@@ -72,7 +74,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/raykrueger/ruby-smpp"
   s.require_paths = ["lib"]
   s.rubyforge_project = "anjlab-ruby-smpp"
-  s.rubygems_version = "1.8.22"
+  s.rubygems_version = "1.8.17"
   s.summary = "Ruby implementation of the SMPP protocol, based on EventMachine."
 
   if s.respond_to? :specification_version then
