@@ -23,7 +23,10 @@ class Smpp::OptionalParameter
       tag, length, remaining_bytes = data.unpack('H4na*')
       tag = tag.hex
 
-      raise "invalid data, cannot parse optional parameters" if tag == 0 or length.nil?
+      if tag == 0 || length.nil?
+        Smpp::Base.logger.error "invalid data, cannot parse optional parameters tag: #{tag} length:#{length}"
+        length = length.to_i
+      end
 
       value = remaining_bytes.slice!(0...length)
 
