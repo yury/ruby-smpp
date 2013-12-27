@@ -5,7 +5,7 @@ module Smpp
 
     # This class is not required by smpp.rb at all, you need to bring it in yourself.
     # This class also requires iconv, you'll need to ensure it is installed.
-    class Utf8Encoder 
+    class Utf8Encoder
 
       EURO_TOKEN = "_X_EURO_X_"
 

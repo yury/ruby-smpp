@@ -19,6 +19,9 @@ coverage
 rdoc
 pkg
 tags
+.bundle
+vendor/ruby
+.rvmrc
 
 ## PROJECT::SPECIFIC
 *.log
